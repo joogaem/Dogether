@@ -1,0 +1,131 @@
+.contentBox {
+    width: calc(100% - 255px);
+    height: 80vh;
+    background-color: rgb(154, 193, 184);
+    border-radius: 25px;
+    padding-top: 50px;
+}
+.arlimContainer {
+    width: 80%;
+    margin: auto;
+}
+.arlimHomeTitle {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.menuTitle {
+    line-height: 30px;
+}
+.arlimCard {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    :last-child { margin: 0 }
+}
+.arlimCardDate {
+    width: 10%;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: rgb(85, 85, 85);
+
+    :first-child {
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    :last-child {
+        font-size: 12px;
+    }
+}
+.arlimCardContent {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+
+    :first-child { //icon
+        padding-bottom: 10px;
+        display: flex;
+
+        i { 
+            margin-right: 10px;
+            :last-child { margin: 0 } 
+        }
+    }
+
+    :last-child { //text
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+}
+
+.arlimCardComment {
+    display: flex;
+    align-items: center; 
+    font-size: 14px;
+    padding: 0 15px;
+
+    i { padding-left: 5px; }
+}
+
+.arlimCardImg {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: end;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.albumCards{
+    display: flex;
+    .albumCard{
+        width: 280px;
+        padding: 20px 15px;
+        background-color: #fff;
+        border-radius: 20px;
+        margin-right: 10px;
+        box-shadow: 0px 3px 20px 3px rgb(105, 103, 103);
+
+        .albumCard:nth-child(2n-1){transform: rotate(10deg);}
+    
+        .albumImg{
+            img {
+                width: 250px;
+                padding-bottom: 10px;
+            }
+        }
+    
+        .albumCardContent{
+            padding-left: 5px;
+            .albumDate{font-size: 22px; line-height: 1.2;}
+            .albumTitle{font-size: 18px; color: #888;}
+        }
+    }
+}
+
+@media screen and (max-width: 1179px) {
+    .contentBox {
+        width: calc(100% - 70px);
+    }
+
+    .arlimCardContent:first-child { //icon
+            padding-bottom: 5px;
+    }
+    
+  }

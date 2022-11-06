@@ -1,0 +1,152 @@
+.sidebarContainer {
+  height: 100%;
+  width: 255px;
+  left: 0;
+
+  .profileArea {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+
+
+    .profileContent {
+      padding-top: 20px;
+      font-size: 14px;
+      text-align: center;
+
+      div {
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+.ticketArea {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-size: 14px;
+  text-align: center;
+
+  .ticketCount {
+    display: flex;
+    div { padding-left: 5px; }
+  }
+}
+
+.sidebarProfileImage {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.menu-bars {
+  font-size: 1.5rem;
+  background: none;
+}
+
+.navbar {
+  width: 100%;
+  position: relative;
+
+  .MenuTitle {
+    padding: 20px 40px;
+  }
+}
+
+.nav-menu-items {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu-itemsIcon {
+  left: 20px;
+  width: 50px;
+  font-size: 20px;
+  color: gray;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu-itemsText {
+  position: absolute;
+  font-size: 14px;
+  left: 80px;
+  color: gray;
+}
+
+.nav-menu-items:hover {
+    background-color: rgb(233, 233, 233);
+}
+.selectMenuBar {
+  width: 7px;
+  height: 50px;
+}
+.nav-menu-items.active{
+    background-color: rgb(233, 233, 233);
+
+  .selectedList {
+    background-color: rgb(154, 193, 184);
+  }
+  .selectMenuBar {
+    background-color: rgb(154, 193, 184);
+  }
+}
+
+.navbar-toggle {
+  background-color: black;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.selectedList {
+  width: 5px;
+  height: 100%; 
+}
+.thumbnailImage {
+  width: 200px;
+  margin: auto;
+  padding: 10px 0px;
+
+  img {
+    border: 1px solid lightgray;
+  }
+}
+@media screen and (max-width: 1179px) { //pad
+  .sidebarContainer {
+    width: 70px;
+    transition: all ease-out 0.5s;
+  }
+  .nav-menu-itemsIcon {
+    left: 9px;
+  }
+  .nav-menu-itemsText {
+    display: none;
+  }
+  .thumbnailImage {
+    display: none;
+  }
+  .sidebarProfileImage {
+    width: 50px;
+    border-radius: 50%;
+  }
+  .profileContent, .MenuTitle, .ticketArea {
+    display: none;
+  }
+  .sidebarProfileImage {
+    margin-bottom: 50px;
+  }
+}

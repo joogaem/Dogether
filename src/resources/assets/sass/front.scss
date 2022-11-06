@@ -1,0 +1,29 @@
+@import "./_variables";
+
+.pageMain {
+    padding-bottom: 80px;
+    #mainTitle {
+      color: $font-color-main;
+      text-align: center;
+      margin-top: 25%;
+    }
+  
+    #mainOrganizationBox {
+      margin-top: 20px;
+    }
+  
+    #form-login {
+      margin-top: 40px;
+    }
+  
+
+    .selectOrganization {
+      font-size: 18.75px;
+    }
+    #form-login {
+      margin-top: 4px;
+    }
+    .form-group {
+      margin-bottom: 4px;
+    }
+  }
