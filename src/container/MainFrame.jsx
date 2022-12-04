@@ -3,6 +3,7 @@ import SideBar from '../components/_commons/SideBar';
 import AlbumContent from './AlbumContent';
 import '../resources/assets/sass/Main.scss';
 import React from 'react';
+import MedicineContent from './MedicineContent';
 function MainFrame(props) {
     return (
         <>
@@ -10,7 +11,9 @@ function MainFrame(props) {
             <div style={{ display: 'flex'}}>
                 <SideBar />
                 <div className="contentBox">
-                    <AlbumContent />
+                    <div className='contentBoxInner'>
+                        <MedicineContent />
+                    </div>
                 </div>
             </div>
 

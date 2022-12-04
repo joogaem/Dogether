@@ -1,0 +1,9 @@
+table{width: 100%;}
+.medicineTable{
+    height: 50px;
+    td{width: 33%; text-align: center; border-bottom: 1px solid #ddd;}
+    .medicineLeft{display: flex; align-items: center;}
+    .name{font-size: 24px; font-weight: bold;margin-right: 10px;}
+    .classs{font-size: 14px; color: #666;}
+    .date{font-size: 14px; color: #666;}
+}
