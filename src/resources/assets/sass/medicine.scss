@@ -1,9 +1,15 @@
 table{width: 100%; border-collapse: collapse;}
 .medicineTable{
     height: 50px;
+    border: none;
+    border-radius: 15px;
     td{width: 33%; text-align: center; border-bottom: 1px solid #ddd; padding: 10px;}
     .medicineLeft{display: flex; align-items: center;}
     .name{font-size: 22px; font-weight: bold;margin-right: 6px;}
     .classs{font-size: 14px; color: #666;}
     .date{font-size: 14px; color: #666;}
+}
+.medicineTable:hover{
+    background-color: #F4EAE8;
+    overflow: hidden;
 }
