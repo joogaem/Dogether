@@ -32,3 +32,55 @@
     border-radius: 20px;
     margin: auto;
 }
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .pencil{
+        padding: 5px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid rgb(83,69,48);
+        color: rgb(83,69,48);
+        background-color: rgb(250, 237, 225);
+        border-radius: 25px;
+        outline: none;
+        box-shadow: 3px 4px rgb(83,69,48);
+        cursor: pointer;
+    }
+    .pencil:active {
+        background-color: rgb(245, 215, 189);
+        box-shadow: 1.5px 2px rgb(83,69,48);
+        transform: translate(1.5px, 2px);
+        }
+}
+
+label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 13px;
+
+    .checkInput {  
+        appearance: none;
+    }
+
+    .customcheckBox{
+        display: inline-block;
+        width: 16px; height: 16px;
+        margin-right: 10px;
+        border-radius: 6px;
+        background-color: #f5c15a;
+    }
+
+    .checkInput:checked ~ .customcheckBox {
+        border-color: transparent;
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+        background-size: 100% 100%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-color: rgb(39, 163, 39);
+    }
+}
