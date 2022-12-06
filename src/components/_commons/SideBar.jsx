@@ -7,17 +7,33 @@ function SideBar(props) {
     const { pathname, state } = useLocation(0);
 
     useEffect(() => {
-        if (pathname.indexOf('video') > 0) {
+
+        if (pathname.indexOf('arlim') > 0) {
             setSelectedTab(1)
         }  
-        else if (pathname.indexOf('subtitle') > 0) {
+        else if (pathname.indexOf('album') > 0) {
             setSelectedTab(2)
         }
-        else if (pathname.indexOf('chapter') > 0) {
+        else if (pathname.indexOf('notice') > 0) {
             setSelectedTab(3)
         }
+        else if (pathname.indexOf('feed') > 0) {
+          setSelectedTab(4)
+        }
+        else if (pathname.indexOf('medicine') > 0) {
+            setSelectedTab(5)
+        }
+        else if (pathname.indexOf('plan') > 0) {
+            setSelectedTab(6)
+        }
+        else if (pathname.indexOf('schedule') > 0) {
+            setSelectedTab(7)
+        }
+        else if (pathname.indexOf('attendance') > 0) {
+          setSelectedTab(8)
+        }
 
-    },[])
+    },[pathname])
 
     return (
       <>
@@ -54,7 +70,7 @@ function SideBar(props) {
                       </div>
                     </div>
                   </Link>
-                  <Link to={'/'}>
+                  <Link to={'/arlim'}>
                     <div className = {`${selectedTab === 1 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
@@ -66,7 +82,7 @@ function SideBar(props) {
                     </div>
                   </Link>
 
-                  <Link to={"/video"}>
+                  <Link to={"/album"}>
                     <div className = {`${selectedTab === 2 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
@@ -78,7 +94,7 @@ function SideBar(props) {
                     </div>
                   </Link>
 
-                  <Link to="/subtitle">
+                  <Link to="/notice">
                     <div className = {`${selectedTab === 3 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
@@ -90,7 +106,7 @@ function SideBar(props) {
                     </div>
                   </Link>
 
-                  <Link to="/chapter">
+                  <Link to="/feed">
                     <div className = {`${selectedTab === 4 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
@@ -102,7 +118,7 @@ function SideBar(props) {
                     </div>
                   </Link>
 
-                  <Link to="/chapter">
+                  <Link to="/medicine">
                     <div className = {`${selectedTab === 5 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
@@ -114,11 +130,11 @@ function SideBar(props) {
                     </div>
                   </Link>
 
-                  <Link to="/chapter">
+                  <Link to="/plan">
                     <div className = {`${selectedTab === 6 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
-                        <i class="fas fa-file-invoice"></i>
+                        <i className="fas fa-file-invoice"></i>
                       </div>
                       <div className = "nav-menu-itemsText">
                           계획안
@@ -126,7 +142,7 @@ function SideBar(props) {
                     </div>
                   </Link>
 
-                  <Link to="/chapter">
+                  <Link to="/schedule">
                     <div className = {`${selectedTab === 7 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
@@ -138,7 +154,7 @@ function SideBar(props) {
                     </div>
                   </Link>
 
-                  <Link to="/chapter">
+                  <Link to="/attendance">
                     <div className = {`${selectedTab === 8 ? 'nav-menu-items active' : 'nav-menu-items'}`}>
                       <div className = "selectMenuBar"></div>
                       <div className = "nav-menu-itemsIcon">
@@ -149,28 +165,6 @@ function SideBar(props) {
                       </div>
                     </div>
                   </Link>
-
-                  {/* <Link to="/analytics">
-                    <div className = "nav-menu-items">
-                      <div className = "nav-menu-itemsIcon">
-                        <i className="far fa-cloud-upload"></i>
-                      </div>
-                      <div className = "nav-menu-itemsText">
-                          통계
-                      </div> 
-                    </div>
-                  </Link>
-
-                  {/* <Link to="/settings">                  
-                    <div className = "nav-menu-items">
-                      <div className = "nav-menu-itemsIcon">
-                        <i className="far fa-address-card"></i>
-                      </div>
-                      <div className = "nav-menu-itemsText">
-                          설정
-                      </div>
-                    </div>
-                  </Link> */}
                  </div>
             </nav>
           </div> 
